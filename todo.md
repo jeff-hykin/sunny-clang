@@ -4,3 +4,4 @@
 - Add codemirror, load it on file system tree click
 - Add compile action area
 - Add output terminal area
+- Github pages output bundle
