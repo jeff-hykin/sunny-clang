@@ -11,6 +11,20 @@ import { FileTree } from "./components/FileTree.tsx"
 
 import { GeistProvider, CssBaseline, Button, Page, Text, useToasts, Tree } from "https://esm.sh/@geist-ui/core?target=esnext&dev&deps=react@17.0.1,react-dom@17.0.1"
 
+import CodeMirror from 'https://esm.sh/@uiw/react-codemirror?target=esnext&dev&deps=react@17.0.1,react-dom@17.0.1'
+import { cpp, cppLanguage } from 'https://esm.sh/@codemirror/lang-cpp?target=esnext&dev&deps=react@17.0.1,react-dom@17.0.1'
+import { languages } from 'https://esm.sh/@codemirror/language-data?target=esnext&dev&deps=react@17.0.1,react-dom@17.0.1'
+import { atomone } from 'https://esm.sh/@uiw/codemirror-theme-atomone?target=esnext&dev&deps=react@17.0.1,react-dom@17.0.1';
+
+
+const code = `
+#include <iostream>
+
+int main() {
+    std::cout << "meow++" << std::endl;
+}
+`;
+
 export function App() {
     const { setToast } = useToasts()
     const handler = (path) => {
@@ -30,6 +44,7 @@ export function App() {
                     <Counter />
                 </div>
                 <Page>
+                    <CodeMirror value={code} theme={atomone} extensions={[cpp({ base: cppLanguage, codeLanguages: languages })]} />
                     <Text h1>Home Page</Text>
                     <Button>Submit</Button>
                     <Tree onClick={handler}>
