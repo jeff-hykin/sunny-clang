@@ -7,6 +7,7 @@
 import { React } from "../deps.ts"
 import Counter from "./components/Counter.tsx"
 import "./shims-react.ts"
+import { FileTree } from "./components/FileTree.tsx"
 
 export function App() {
     return (
@@ -16,6 +17,7 @@ export function App() {
             <div className="App">
                 <header className="App-header">Howdy</header>
 
+                <FileTree />
                 <Counter />
             </div>
         </div>
