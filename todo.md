@@ -1,3 +1,4 @@
+- Add Cmd+enter hook to code mirror, run compile on main file, download output
 - Create converter between FS object and file tree
     - Will need to use refs to cram delete/rename buttons into the tree. Use button callbacks to set action, then tree callback to know which tree item to act on
 - Add codemirror, load it on file system tree click
