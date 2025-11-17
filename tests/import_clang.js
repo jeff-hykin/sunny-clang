@@ -29,7 +29,7 @@ var module = await WebAssembly.compile(meow)
     // shim needed to work on deno
     import "https://raw.githubusercontent.com/jeff-hykin/deno_proto_shim/2056dfa77bd58ae826d5deedda1a5020717dda9c/main.js"
     // import { WASI, init } from "https://esm.sh/@wasmer/wasi?target=esnext"
-    import { WASI, init } from "https://cdn.jsdelivr.net/npm/@wasmer/wasi/dist/Library.esm.js"
+    import { WASI, init } from "https://cdn.jsdelivr.net/npm/@wasmer/wasi@v1.2.2/dist/Library.esm.js"
     // instance = await WebAssembly.instantiate(module, {wasi_snapshot_preview1: wasi.wasiImport})
     // https://cdn.jsdelivr.net/npm/@wasmer/wasi/
     // import { WasmFs } from "https://esm.sh/@wasmer/wasmfs?target=esnext"
